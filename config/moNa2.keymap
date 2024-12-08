@@ -70,10 +70,7 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                       &kp B        &kp TAB                        &kp INT_MUHENKAN              &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp ESC           &kp LEFT_ALT  &kp LCTRL  &lt_to_layer_0 6 BACKSPACE  &lt 1 SPACE  &lt_to_layer_0 3 LANGUAGE_1    &mt RIGHT_COMMAND LANGUAGE_2  &lt 2 ENTER                             &kp EQUAL
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp RC(PAGE_UP) PAGE_DOWN>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+         sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_1 {
