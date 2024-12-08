@@ -51,7 +51,10 @@
         mission: mission {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(UP_ARROW)>;
+            bindings = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp up_allow>
+            , <&macro_release &kp LCTRL>
+            ;
             label = "MISSION";
         };
     };
