@@ -51,7 +51,7 @@
         mission_control: mission_control {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp UP_ARROW>;
+            bindings = <&kp UP_ARROW &kp LEFT_COMMAND>;
             label = "MISSION_CONTROL";
         };
 
@@ -137,10 +137,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans      &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1          &sl 5       &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission_control  &launchpad  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1          &sl 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(UP_ARROW)  &kp F4  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
