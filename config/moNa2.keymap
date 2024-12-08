@@ -139,7 +139,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1          &sl 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(UP_ARROW)  &kp F4  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LC(UP)  &kp F4  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                      &trans
             >;
 
