@@ -47,6 +47,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        mission_control: mission_control {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp UP_ARROW>;
+            label = "MISSION_CONTROL";
+        };
+
+        launchpad: launchpad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_WIN &kp L>;
+            label = "LAUNCHPAD";
+        };
     };
 
     behaviors {
@@ -123,11 +137,13 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1          &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(UP_ARROW)  &kp F4    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                        &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans            &trans      &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1          &mkp MB3    &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission_control  &launchpad  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
     };
 };
