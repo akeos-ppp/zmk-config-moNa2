@@ -20,12 +20,12 @@
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&kp RS(LPAR)>;
             key-positions = <12 13>;
         };
 
         muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
+            bindings = <&to_layer_0 AMPERSAND>;
             key-positions = <11 10>;
         };
 
@@ -37,6 +37,11 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        l {
+            bindings = <&kp RPAR>;
+            key-positions = <13 14>;
         };
     };
 
@@ -51,10 +56,7 @@
         mission: mission {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp UP &kp LCTRL>,
-                <&macro_pause_for_release>;
+            bindings = <&macro_press>, <&kp UP &kp LCTRL>, <&macro_release>;
 
             label = "MISSION";
         };
@@ -65,7 +67,7 @@
             bindings =
                 <&macro_press>,
                 <&kp RIGHT_COMMAND &kp RIGHT_ALT &kp L>,
-                <&macro_pause_for_release>;
+                <&macro_release>;
 
             label = "LAUNCHPAD";
         };
