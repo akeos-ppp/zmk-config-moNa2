@@ -51,9 +51,23 @@
         mission: mission {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp UP &kp LCTRL>, <&macro_press>;
+            bindings =
+                <&macro_press>,
+                <&kp UP &kp LCTRL>,
+                <&macro_pause_for_release>;
 
             label = "MISSION";
+        };
+
+        launchpad: launchpad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_COMMAND &kp RIGHT_ALT &kp L>,
+                <&macro_pause_for_release>;
+
+            label = "LAUNCHPAD";
         };
     };
 
@@ -131,10 +145,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission  &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans      &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mo 5       &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission  &launchpad  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
             >;
         };
     };
