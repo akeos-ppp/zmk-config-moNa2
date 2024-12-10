@@ -100,15 +100,26 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E      &kp R                       &kp T                                                                     &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D      &kp F                       &kp G        &kp LS(LG(S))                  &kp SEMICOLON                 &kp H        &kp J  &lt 5 K    &kp L    &kp MINUS
+&kp A             &kp S         &kp D      &kp F                       &kp G        &kp LS(LG(S))                  &kp SEMICOLON                 &kp H        &kp J  &lt 6 K    &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C      &kp V                       &kp B        &kp ESC                        &kp AT_SIGN                   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_ALT  &kp LCTRL  &lt_to_layer_0 6 BACKSPACE  &lt 1 SPACE  &lt_to_layer_0 3 LANGUAGE_1    &mt RIGHT_COMMAND LANGUAGE_2  &lt 2 ENTER                             &kp EQUAL
+&kp TAB           &kp LEFT_ALT  &kp LCTRL  &lt_to_layer_0 4 BACKSPACE  &lt 2 SPACE  &lt_to_layer_0 5 LANGUAGE_1    &mt RIGHT_COMMAND LANGUAGE_2  &lt 3 ENTER                             &kp EQUAL
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_1 {
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &mkp MB3    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &trans      &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission  &launchpad  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
@@ -119,7 +130,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        layer_2 {
+        layer_3 {
             bindings = <
 &kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                 &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
@@ -130,7 +141,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        layer_3 {
+        layer_4 {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -141,7 +152,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        layer_4 {
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
@@ -150,24 +161,13 @@
             >;
         };
 
-        layer_5 {
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans      &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3    &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission  &launchpad  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
