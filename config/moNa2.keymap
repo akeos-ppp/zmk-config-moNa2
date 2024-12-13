@@ -69,6 +69,16 @@
 
             label = "LAUNCHPAD";
         };
+
+        capture: capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LEFT_SHIFT &kp LEFT_COMMAND &kp KP_NUMBER_5>;
+
+            label = "CAPTURE";
+        };
     };
 
     //新たな動作を定義する
@@ -110,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &mkp MB3    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mo 6       &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mission  &launchpad  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 6       &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &capture    &trans  &trans  &mission  &launchpad  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
