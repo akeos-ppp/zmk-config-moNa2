@@ -73,7 +73,7 @@
         capture: capture {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LG(LS(KP_N5))>;
+            bindings = <&macro_tap>, <&kp LG(LS(N5))>;
 
             label = "CAPTURE";
         };
