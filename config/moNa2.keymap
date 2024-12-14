@@ -109,6 +109,14 @@
 
             label = "LEFT_TWO";
         };
+
+        right_two: right_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LA(LC(T))>;
+
+            label = "RIGHT_TWO";
+        };
     };
 
     //新たな動作を定義する
@@ -183,10 +191,10 @@
 
         layer_4 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &left_two       &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&left           &center                 &right          &trans                   &trans   &trans    &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))     &kp UP_ARROW    &kp LC(TAB)          &trans                        &trans  &trans  &trans  &trans  &trans
+&left_two       &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &right_two  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &trans          &kp LC(RIGHT_ARROW)  &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&left           &center             &right          &trans               &trans      &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
