@@ -159,6 +159,17 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
+ MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &capture  &trans  &mkp MB1  &mo 6       &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &mission  &launchpad  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans                                  &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
         layer_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
@@ -209,17 +220,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &capture  &trans  &mkp MB1  &mo 6       &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &mission  &launchpad  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans                                  &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
